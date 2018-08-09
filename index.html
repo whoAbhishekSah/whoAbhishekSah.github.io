@@ -4,7 +4,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
     <script src="./js/bootstrap.min.js"></script>
+    <style>
+      body {
+        overflow-x: hidden;
+        height:100vh;
+      }
+      @keyframes example {
+        from {opacity: 0;}
+        to {opacity: 1;}
+      }
+      #card {
+        animation-name: example;
+        animation-duration: 3s;
+        margin-top:auto;
+        margin-bottom:auto;
+        text-align:center;
+        align-content: center;
+        font-family:merriweather, serif;
+        margin-top:-20px;
+        background-color: #d7e5ee;
+      }
+      .heading{
+        font-family:open sans, sans-serif; 
+        font-size:50; 
+        font-weight: bold;
+      }
+      .circle-image{
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        background-image:url("http://placekitten.com/g/200/400");
+        display:block;
+        background-position-y:25% 
+      }
+    </style>
   </head>
+
   <body>
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
@@ -14,39 +49,34 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand"></a>
+        <a class="navbar-brand" href='index.html'>Abhishek Sah</a>
       </div>
       <div class="collapse navbar-collapse" id="example-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="blog.html">Blog</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <div class="container">
-      <div class="jumbotron" style="background-color: white;">
-        <h1>Hi, I'm Abhishek Sah</h1>
+    <div class="row" id="card">
+      <div class="jumbotron" style="background-color: #d7e5ee">     
+        <img src="./img/abhishek.jpeg" height="170px" width="170px" class="img-circle" alt="Pondicherry Beach">
+        <p class="heading">Hi, I'm Abhishek Sah</p>
         <p>I am a final year Computer Science & Engineering undergraduate at IIT Jodhpur.</p>
-        <p>I design websites, mobile application and software solution to problems which I find intresting. 
-          My expertise is in Web and Mobile application development.</p>
+        <p>I design websites, mobile application and software solution to problems which I find intresting.<br>
+         My expertise is in web and mobile application development.<br> I love to code in Ruby and JavaScript.
+        </p>
         <p>
           <a class="btn btn-lg btn-primary" href="projects.html" role="button">View My Work </a>
           <a class="btn btn-lg btn-primary" href="contact.html" role="button">Contact</a>
         </p>
       </div>
     </div>
+    <script>
+      $(document).ready(function(){ $('#card').fadeIn(); });
+    </script>
   </body>
 </html>
