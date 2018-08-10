@@ -1,13 +1,24 @@
 <html>
   <head>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" >
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
-    <script src="./js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+    <title>Abhishek Sah</title>
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
     <style>
       body {
         overflow-x: hidden;
-        height:100%;
       }
       @keyframes example {
         from {opacity: 0;}
@@ -20,22 +31,12 @@
         margin-bottom:auto;
         text-align:center;
         align-content: center;
-        font-family:merriweather, serif;
         margin-top:-20px;
         background-color: #d7e5ee;
+        height:100vh;
       }
-      .heading{
-        font-family:open sans, sans-serif; 
-        font-size:50; 
-        font-weight: bold;
-      }
-      .circle-image{
-        width:200px;
-        height:200px;
-        border-radius:50%;
-        background-image:url("http://placekitten.com/g/200/400");
-        display:block;
-        background-position-y:25% 
+      .text{
+        font-family:merriweather, serif;
       }
     </style>
   </head>
@@ -62,11 +63,13 @@
       </div>
     </nav>
     <div class="row" id="card">
-      <div class="jumbotron" style="background-color: #d7e5ee">     
+      <div class="jumbotron" style="background-color: #d7e5ee">
         <img src="./img/abhishek.jpeg" height="170px" width="170px" class="img-circle" alt="Pondicherry Beach">
-        <p class="heading">Hi, I'm Abhishek Sah</p>
-        <p>I am a final year Computer Science & Engineering undergraduate at IIT Jodhpur.</p>
-        <p>I design websites, mobile application and software solution to problems which I find intresting.<br>
+        <p style="  font-family:open sans, sans-serif;font-size:50;font-weight: bold;">
+          Hi, I'm Abhishek Sah
+        </p>
+        <p class="text">I am a final year Computer Science & Engineering undergraduate at IIT Jodhpur.</p>
+        <p class="text">I design websites, mobile application and software solution to problems which I find intresting.<br>
          My expertise is in web and mobile application development.<br> I love to code in Ruby and JavaScript.
         </p>
         <p>
@@ -75,8 +78,13 @@
         </p>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
     <script>
-      $(document).ready(function(){ $('#card').fadeIn(); });
+      $(document).ready(function () { $('#card').fadeIn(); });
     </script>
   </body>
 </html>
