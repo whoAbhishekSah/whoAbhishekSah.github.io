@@ -10,6 +10,7 @@
     <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <script src="./assets/js/ie-emulation-modes-warning.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -38,10 +39,101 @@
       .text{
         font-family:merriweather, serif;
       }
+
+      
+    
+    
+    .social-link-bar-container {
+      margin-left:auto; 
+      margin-right:0;
+    }
+    .social-link-bar-container a {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #428bca;
+      padding: 10px;
+      border-radius: 100%;
+      box-sizing: content-box;
+      float: right;
+      margin:10px;
+      text-align: center;
+    }
+    
+    .social-link-bar-container a:hover {
+      opacity: 0.8;
+    }
+    
+    .social-link-bar-container a:not(:first-child) div {
+      margin: 0 0 0 10px;
+    }
+    
+    
+    .title1 {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        font-family: 'Oswald';
+        color: #5C5C5C; 
+        font-size: 40px;
+        font-weight: normal;
+        text-decoration: none;
+        letter-spacing: 0em;
+        line-height: 1em;
+      }
+
+    .myimg {
+      margin: 10px;
+      border:2px solid #428bca;
+      border-radius: 500px;
+      -webkit-border-radius: 500px;
+      -moz-border-radius: 500px;
+     }
+
+     i{
+      color:white;
+     }
+     .fa{
+      font-size:20px;
+     }
     </style>
   </head>
 
-  <body>
+  <body class="container">
+
+
+  <header>
+    <div class="row section" style="height:auto; padding:10px 0px 10px 0px;">
+      
+        <div class="col-lg-8">
+          
+          <div class="element text-element" > 
+            <div class="" data-fontscale="0.59049"><h4 class="title1" style="">ABHISHEK SAH</h4>
+            </div>
+          </div>
+         
+            <div class="text-content hasFontScale" data-fontscale="0.531441"><p class="paragraph2"><strong><span style="letter-spacing:0.15em;"><span class="fgColor fg-C1"><span class="fontSize" style="font-size:14px;"><span class="fontFamily" style="font-family:open sans;">COMPUTER SCIENCE & ENGINEERING</span></span></span></span></strong></p>
+            </div>
+       
+        </div>
+
+        <div class="col-lg-4 social-link-bar-container " style="">
+          <a href="http://www.facebook.com/websitedotcom" target="_blank"> 
+          <i class="fa fa-facebook-f"></i></a>
+        
+          <a href="http://www.twitter.com/websitedotcom/" target="_blank">
+          <i class="fa fa-linkedin"></i></a>
+
+          <a href="http://www.youtube.com/websitedotcomlimited" target="_blank">
+          <i class="fa fa-github"></i></a>
+
+        </div>
+      
+        
+    </div>
+  </header>
+
+
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
@@ -50,7 +142,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href='index.html'>Abhishek Sah</a>
+        <!-- <a class="navbar-brand" href='index.html'>Abhishek Sah</a> -->
       </div>
       <div class="collapse navbar-collapse" id="example-navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -64,9 +156,9 @@
     </nav>
     <div class="row" id="card">
       <div class="jumbotron" style="background-color: #ffffff">
-        <img src="./img/abhishek.jpeg" height="170px" width="170px" class="img-circle" alt="Pondicherry Beach">
+        <img  src="./img/abhishek.jpeg" height="170px" width="170px" class="myimg img-circle" alt="Pondicherry Beach">
         <p style="  font-family:open sans, sans-serif;font-size:50;font-weight: bold;">
-          Hi, I'm Abhishek Sah
+         <!--  Hi, I'm Abhishek Sah -->
         </p>
         <p class="text">I am a final year Computer Science & Engineering undergraduate at IIT Jodhpur.</p>
         <p class="text">I design websites, mobile application and software solution to problems which I find intresting.<br>
