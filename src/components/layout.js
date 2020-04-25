@@ -8,12 +8,13 @@ const Layout = ({ location, title, children }) => {
   let header
 
   if (location.pathname === rootPath) {
+    console.log('rendered root', title, children);
     header = (
       <h1
         style={{
           ...scale(1.5),
           marginBottom: rhythm(1.5),
-          marginTop: 0,
+          marginTop: 0
         }}
       >
         <Link

@@ -3,7 +3,7 @@ module.exports = {
     title: `Abhishek Sah`,
     author: {
       name: `Abhishek Sah`,
-      summary: `Software Engineer, Amature Drummer & Cook`,
+      summary: `Software Engineer, Amature drummer & cook`,
     },
     description: `Portfolio website hosting mostly blogs, thoughts & ideas`,
     siteUrl: `http://abhisheksah.xyz`,
@@ -66,7 +66,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/linux-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
