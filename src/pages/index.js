@@ -49,11 +49,11 @@ const BlogIndex = ({ data, location }) => {
       <Introduction />
       <h3 align="center">Blog posts</h3>
       {years.map(year => {
+        <h6>{year}</h6>
         const postsOfThisYear = postsIndexedByYears[year]
-
-        return postsOfThisYear.map(({ node }) => {
+        return (postsOfThisYear.map(({ node }) => {
           return renderPost(node)
-        })
+        }))
       })}
     </Layout>
   )
