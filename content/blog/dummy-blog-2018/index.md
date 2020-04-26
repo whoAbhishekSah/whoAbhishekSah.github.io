@@ -1,6 +1,6 @@
 ---
 title: Dummy blog
-date: "2018-12-14T22:12:03.284Z"
+date: "2018-07-07T22:12:03.284Z"
 description: "Hello World"
 ---
 

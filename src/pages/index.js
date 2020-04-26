@@ -5,25 +5,12 @@ import Introduction from "../components/introduction"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import { getShortDate, indexPostsByYear } from "../utils/helper"
 
-const getPublishYearOfPost = post =>
-  String(new Date(post.node.frontmatter.date).getFullYear())
-const indexPostsByYear = posts => {
-  console.log("received posts", posts)
-  const postsIndexedByYears = {}
-  const uniqueYearsSet = new Set()
-  posts.map(post => uniqueYearsSet.add(getPublishYearOfPost(post)))
-  const uniqueYearsArray = Array.from(uniqueYearsSet)
-  uniqueYearsArray.map(i => (postsIndexedByYears[`${i}`] = []))
-  posts.map(post => {
-    const year = getPublishYearOfPost(post)
-    postsIndexedByYears[`${year}`].push(post)
-  })
-  return postsIndexedByYears
-}
 
 const renderPost = node => {
   const title = node.frontmatter.title || node.fields.slug
+  const dateOfPublication = getShortDate(node.frontmatter.date)
   return (
     <article key={node.fields.slug}>
       <li
@@ -31,7 +18,7 @@ const renderPost = node => {
           marginBottom: rhythm(1 / 4),
         }}
       >
-        <small>{node.frontmatter.date} >> </small>
+        <span>{dateOfPublication} >> </span>
         <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
           {title}
         </Link>
@@ -42,7 +29,7 @@ const renderPost = node => {
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const postsIndexedByYears = indexPostsByYear(data.allMarkdownRemark.edges)
-  const years = Object.keys(postsIndexedByYears)
+  const years = Object.keys(postsIndexedByYears).sort().reverse()
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
@@ -52,7 +39,7 @@ const BlogIndex = ({ data, location }) => {
         const postsOfThisYear = postsIndexedByYears[year]
         return (
           <React.Fragment>
-            <div>{year}</div>
+            <h3>{year}</h3>
             {postsOfThisYear.map(({ node }) => {
               return renderPost(node)
             })}
