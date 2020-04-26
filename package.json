@@ -36,9 +36,33 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^3.0.9",
     "prettier": "2.0.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 80
+  },
+  "eslintConfig": {
+    "extends": "./config/.eslintrc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format && yarn lint"
+    }
+  },
+  "homepage": "https://github.com/whoAbhishekSah/whoAbhishekSah.github.io",
   "keywords": [
     "gatsby"
   ],
@@ -46,13 +70,15 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "https://github.com/whoAbhishekSah/whoAbhishekSah.github.io"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "./node_modules/prettier/bin-prettier.js --check \"**/*.{js,jsx,json,md}\"",
+    "format:fix": "yarn format --write",
     "start": "npm run develop",
+    "lint": "./node_modules/.bin/eslint .",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"

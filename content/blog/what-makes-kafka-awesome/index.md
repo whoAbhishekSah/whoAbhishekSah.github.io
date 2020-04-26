@@ -1,7 +1,7 @@
 ---
 title: What makes Kafka awesome?
-date: "2020-04-25T22:12:03.284Z"
-description: "Hello World"
+date: '2020-04-25T22:12:03.284Z'
+description: 'Hello World'
 ---
 
 [Kafka](https://kafka.apache.org/) is one of those software that are in the foundations of most of the data-driven companies e.g. LinkedIn, Uber, Spotify, Slack etc. Kafka solves the problem of high throughput real-time data pipelining with minimal latency. It's flexible and lean architecture has helped companies scale massively without worrying about the quality and latency of the data pipeline. In this blog, we will go through internals of mighty Kafka and will find out what makes Kafka so awesome.
@@ -14,11 +14,11 @@ Kafka is mainly a Log processing application. By log, we mean any form of raw da
 
 Why do we need to store these raw data/events in the first place?
 
-Because this helps data-driven companies make efficient decisions. Companies can use this data to improve their search relevance, recommendation systems, and target appropriate ads to customers. 
+Because this helps data-driven companies make efficient decisions. Companies can use this data to improve their search relevance, recommendation systems, and target appropriate ads to customers.
 
 This data, nowadays, can be of enormous volume. Think of the scale at which social media giants like Facebook, LinkedIn operate and storing all major events done by users on their website and mobile applications. This becomes billions of events every day.
 
-Storing these enormous data without compromising throughout is no simple job. Kafka is very good at this(we will see how). Moreover, Kafka gives you the ability to perform real-time processing on this data. One example of such real-time processing is calculating [surge pricing](https://www.davemanuel.com/investor-dictionary/surge-pricing/) in apps(like Uber). 
+Storing these enormous data without compromising throughout is no simple job. Kafka is very good at this(we will see how). Moreover, Kafka gives you the ability to perform real-time processing on this data. One example of such real-time processing is calculating [surge pricing](https://www.davemanuel.com/investor-dictionary/surge-pricing/) in apps(like Uber).
 
 Surge pricing is calculated by taking into consideration the current demand and current supply. These two metrics are used in real-time to calculate how much surge price to add to the trip. For example, Surge price in Uber during rains in the evening.
 The real-time usage of log data brings several challenges. One of which is high throughput. Kafka gives the ability to perform such real-time processing with minimal latency. Kafka is scalable, distributed, supports high throughput, supports real-time consumption of data and provides a [rich set of APIs](https://kafka.apache.org/documentation/#api) to make developers life easy.
@@ -34,7 +34,7 @@ Producer: The entity which produces messages to a topic. The producer applicatio
 Broker: Brokers are servers where the published messages are stored.
 Consumer: The entity which consumes data that was put in a topic(from the Brokers). Consumers consume messages inside a topic from Broker via a bridge called Message Streams.
 
-Given these basic terminologies, you would have guessed the basic flow of data in Kafka. 
+Given these basic terminologies, you would have guessed the basic flow of data in Kafka.
 
 Producers produce messages(data) in topics. Brokers store those data. Consumers can consume data from these topics.
 
@@ -45,7 +45,6 @@ Topics can be of very high throughput depending on the use cases. BookingsLog al
 ![Partition](./2.png)
 
 Each broker stores one or more partitions of various topics.
-
 
 ![Partition](./3.png)
 
@@ -92,6 +91,7 @@ Table of starting offset of each segment fileAny new message which comes, if st
 This table is used to find the segment file which contains the offset asked by the consumer.
 
 ### Consumption of messages
+
 Consuming messages is fairly simple. This is a 4 step process. 
 Consumers send a pull request to brokers. In this request, there are two things. Consumers specify the offset to begin with, and an acceptable number of bytes in the messages.
 Broker on receiving the offset to begin calculates which segment file has the message with asked offset. Simple binary search on the above table gives the address of the segment file to which the message belongs.
@@ -101,9 +101,11 @@ The consumer consumes this data.
 The consumer sends the next offset in the new pull request.
 
 ### Efficiency of Kafka
+
 Kafka is considered the best real-time message log system. There are several design decisions(rather unconventional) which make Kafka so efficient.
 
 #### Storage Efficiency
+
 The first one is the use of offsets instead of message-ids which saves the cost of seek intensive random accesses. On top of that, keeping an index of the offsets of starting message in each segment file makes consumption from a partition fairly efficient.
 
 The second unconventional choice that we see in Kafka is avoiding any caching in Kafka Layer. Kafka avoids caching every message in memory at the process level. Instead, it relies on the underlying file system cache. This offers multiple benefits.
@@ -138,9 +140,9 @@ Consumers to a topic are put in a group called "Consumer Group". Each message m 
 The leader inside a consumer group is decided by a separate entity called [Zookeeper](https://zookeeper.apache.org/). Kafka uses Zookeeper as a configuration store.
 Zookeeper does these 3 things for Kafka.
 
-  - Detecting the addition and removal of brokers and consumers
-  - Triggering rebalance process in each consumer when the above event occurs
-  - Maintaining track of consumed offset of each partition.
+- Detecting the addition and removal of brokers and consumers
+- Triggering rebalance process in each consumer when the above event occurs
+- Maintaining track of consumed offset of each partition.
 
 Rebalancing, whenever required, is taken care of by zookeeper by running a rebalancing algorithm.
 Kafka uses Zookeeper to maintain 4 types of registries(config stores)for various purposes. Let's quickly see what each registry stores.

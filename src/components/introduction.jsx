@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography';
 
 const Introduciton = () => {
   const data = useStaticQuery(graphql`
@@ -26,12 +26,12 @@ const Introduciton = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div
       style={{
-        display: `flex`
+        display: 'flex'
       }}
     >
       <p>
@@ -47,7 +47,7 @@ const Introduciton = () => {
         am reading and what will be my next read.
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Introduciton
+export default Introduciton;
