@@ -19,8 +19,8 @@ A JSON Array is a collection of JSON objects wrapped in ‘[ ]’ separated by a
 
 
 > [
->>  {"id":"2","name":"Abhishek","message":"Read a book","time":"2200"},    
->>  {"id":"3","name":"Uneet","message":"Order Lunch","time":"1400"}
+>  {"id":"2","name":"Abhishek","message":"Read a book","time":"2200"},    
+>  {"id":"3","name":"Uneet","message":"Order Lunch","time":"1400"}
 > ]
 
 
@@ -28,8 +28,8 @@ The JSON object and JSON arrays can be nested in each other as well. See example
 
 
 > {
->> "room": "G75", 
->> "data": [{"id":"2","name":"Abhishek"},{"id":"3","name":"Uneet"}]
+> "room": "G75", 
+> "data": [{"id":"2","name":"Abhishek"},{"id":"3","name":"Uneet"}]
 > }
 
 
@@ -52,11 +52,11 @@ Now we know how we can represent our data in JSON. We can encode our data in our
 Protocol Buffer is another such data-interchange format invented by Google. It is smaller, faster, and simpler than JSON and other data formats out there. JSON is a simple method to represent data. Protocol buffer introduces a schema in the data. For this we first define a (.proto) file. It contains how we want to structure our data. The first JSON object example that I stated earlier, can be given a structure in protocol buffer as given below.
 
 > message Todo {
->>  optional int32 id = 1;
->>  required string name = 2;
->>  required string message = 3;
->>  required google.protobuf.Timestamp time = 4;
->}
+> optional int32 id = 1;
+>  required string name = 2;
+>  required string message = 3;
+>  required google.protobuf.Timestamp time = 4;
+> }
 Note that how we can specify data types (int32, int64, string, timestamp etc), the data labels (optional, required) in our .proto file. Each field has a unique tag. The 1, 2, 3 and 4 in the RHS are the tags to fields. The numbered tags are used to match fields when serializing and deserializing the data.
 
 This gives much more flexibility to extract meaning out of data in an easy manner as compared to JSON. This is a pretty simple example of a proto file. Protocol Buffer have support for namespaces, enumerations as well. After defining the structure, you run the protocol buffer compiler for your application’s language on your (.proto) file to generate data access classes. They will give you simple accessor function for each field.
