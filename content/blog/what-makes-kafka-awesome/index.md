@@ -1,7 +1,7 @@
 ---
 title: What makes Kafka awesome?
 date: '2020-04-25T22:12:03.284Z'
-description: 'Hello World'
+description: 'Kafka'
 ---
 
 [Kafka](https://kafka.apache.org/) is one of those software that are in the foundations of most of the data-driven companies e.g. LinkedIn, Uber, Spotify, Slack etc. Kafka solves the problem of high throughput real-time data pipelining with minimal latency. It's flexible and lean architecture has helped companies scale massively without worrying about the quality and latency of the data pipeline. In this blog, we will go through internals of mighty Kafka and will find out what makes Kafka so awesome.
