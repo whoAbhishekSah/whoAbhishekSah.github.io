@@ -13,7 +13,7 @@ An engineer is supposed to make many decisions every day. Decisions can be of ma
 You need to develop many soft skills. No matter how smart you are or how great a programmer you are, but if you cannot communicate properly and if you cannot explain complex things to people in simple English, you are going to find it very hard to deal with people, every day.
 
 ![IMAGE](1.jpeg)
-Photo by Austin Distel on Unsplash
+Photo by [Austin Distel](https://unsplash.com/@austindistel?utm_source=medium&utm_medium=referral) on Unsplash
 
 ### Time is the most important factor
 
@@ -21,7 +21,7 @@ Time is one of the most valuable resources for everyone in the office. So if you
 
 ### Be fallacy free
 
-Most of us fall in the trap of logical fallacies in our arguments. In the Bootcamp, we practice rigorously in speaking drill to make our arguments free from logical fallacies. We practice hard to inculcate the habit of making fallacy free arguments to sound convincing. Developing such speaking habits makes us reach an agreement in our arguments.
+Most of us fall in the trap of logical fallacies in our arguments. In the Bootcamp, we practice rigorously in speaking drill to make our arguments free from [logical fallacies](https://owl.purdue.edu/owl/general_writing/academic_writing/logic_in_argumentative_writing/fallacies.html). We practice hard to inculcate the habit of making fallacy free arguments to sound convincing. Developing such speaking habits makes us reach an agreement in our arguments.
 Of course, you will need your technical expertise in making decisions on a daily basis. But it’s not just about being technically sound, to be a great software engineer. It’s about those aspects of software development which are not taught in any university, the soft skills.
 
 ### Baby Steps
