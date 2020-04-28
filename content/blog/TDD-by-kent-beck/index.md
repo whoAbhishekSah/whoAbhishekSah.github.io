@@ -55,4 +55,4 @@ TDD is very easy in many languages and testing framework such as Ruby with RSpec
                                                         ...
 
 So that was a brief moment of ours with TDD. Thanks for reading !!!
-Feel free to connect with me on [Twitter]((https://twitter.com/whoAbhishekSah)) for any conversations on this.
+Feel free to connect with me on [Twitter](https://twitter.com/whoAbhishekSah) for any conversations on this.
