@@ -8,6 +8,7 @@
     "url": "https://github.com/whoAbhishekSah/whoAbhishekSah"
   },
   "dependencies": {
+    "disqus-react": "^1.0.8",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-feed": "^2.4.4",
