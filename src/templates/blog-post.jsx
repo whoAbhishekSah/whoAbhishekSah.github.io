@@ -13,7 +13,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext;
   const disqusConfig = {
     shortname: 'abhisheksah',
-    config: { identifier: siteTitle }
+    config: { identifier: post.frontmatter.title }
   };
   return (
     <Layout location={location} title={siteTitle}>
