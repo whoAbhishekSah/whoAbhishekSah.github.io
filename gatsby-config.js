@@ -76,6 +76,27 @@ module.exports = {
       options: {
         pathToConfigModule: 'src/utils/typography'
       }
+    },
+    // removing border bottom from td in iframe of gists
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: ['gatsby-remark-responsive-iframe']
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'whoabhisheksah',
+              includeDefaultCss: true
+            }
+          }
+        ]
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

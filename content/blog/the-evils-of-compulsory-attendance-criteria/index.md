@@ -6,12 +6,12 @@ description: 'BLOG'
 
 Many engineering colleges in India have compulsory attendance criteria. For some colleges it is 60%, for some, it is 70%. During my graduation, my college had compulsory attendance criteria of 85% and it still exists till date.
 
-![IMAGE](./.1.png)
+![Scary email](./1.png)
 Source: My college email account
 
 Can you believe it? This much strict attendance criteria for the so-called elite engineering institution of India. My argument is that compulsory attendance criterion does more evil than good. It kills creativity and hampers the holistic growth of students.
 
-### Faculty quality
+### Teaching standards
 
 The main agenda behind compulsory attendance criteria is to get students to class so that they can study the subjects taught in classrooms. There are several loopholes here. You need good faculty to teach subjects in such a manner that students take interests. Teachers should find ways and means by which studies can be made more interesting. A robust feedback loop needs to be in place.
 
@@ -35,8 +35,8 @@ There is a growing trend of freelancing, working part-time, on a project-by-proj
 
 Most colleges in the Western part of the world do not have compulsory attendance, yet because of the quality of the classes, students attend them voluntarily. The classes are interactive. Students are given the freedom to choose their subjects and sometimes even given options in the method of evaluation.
 
-                                            ...
-
 Strict attendance criteria force you to attend classes that you are not interested in. Colleges should focus attention on how much of the knowledge being imparted is willingly taken by students.
+
+---
 
 Thanks for reading. Feel free to connect with me on [twitter](https://twitter.com/whoAbhishekSah) for any conversations in this.

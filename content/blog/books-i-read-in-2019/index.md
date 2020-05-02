@@ -6,17 +6,18 @@ description: 'Books'
 
 I wanted to talk about the books I have read in 2019. I feel like I have learnt some good things from books and I feel like I should share with everyone. So here we go!
 
-It has been a good year since I started realizing the power of reading books. I spend most of my times with books related to the things I like viz: software development, astronomy, personal finances among many other things. A detailed list of books that I read in 2019 is here on Goodreads. This blog talks about the books I loved the most and recommend everyone to read once if interested in that genre.
+It has been a good year since I started realizing the power of reading books. I spend most of my times with books related to the things I like viz: software development, astronomy, personal finances among many other things. A detailed list of books that I read in 2019 is here on [Goodreads](https://www.goodreads.com/user/year_in_books/2019/74087763). This blog talks about the books I loved the most and recommend everyone to read once if interested in that genre.
 
 I will mostly talk about the books of Personal Finances and Astronomy. Let’s start with Personal Finances first.
 
 ### Personal Finances
 
-Personal finances got my interest at the beginning of my senior year of college. I had taken a course called Financial Engineering and later on, I started liking the various concepts of finances(like options, trading, hedge fund market etc.). Later on, I read some books on personal finances. My personal favourite, on this topic, has been Rich Dad Poor Dad.
+Personal finances got my interest at the beginning of my senior year of college. I had taken a course called Financial Engineering and later on, I started liking the various concepts of finances(like options, trading, hedge fund market etc.). Later on, I read some books on personal finances. My personal favourite, on this topic, has been **Rich Dad Poor Dad**.
 
 This book changed my vision of how I think about finances and expenses. This book teaches us the major difference between the Rich and Poor, which is the mindset (and money follows that). This book teaches you the mindset required to be rich. The author presents very good real-world examples which support his arguments. A simple example, taken from the book:
 
-The poor and the middle class work for money. The rich have money work for them.
+> The poor and the middle class work for money. The rich have money work for them.
+
 The book is filled with much such great advice which will change the way you look at your finances. Personally I agreed with almost all of the advice that was given in the book to be rich. But it is not an easy path to create wealth. The way we have been living our lives has conditioned us to the exact opposite(at least for me). So it requires a lot of discipline, and frequent self-introspection to ensure I am applying those learnings from this book.
 
 I would highly recommend this book for anyone who has never cared about personal finances(literally, complete beginners) and who are struggling to get their financial situations right.

@@ -3,6 +3,7 @@ title: 'India needs strict mob lynching laws'
 date: '2019-08-15T22:12:03.284Z'
 description: 'BLOG'
 ---
+
 ### Mob Lynching in India
 
 Mob lynching mostly includes attacks by vigilantes, murder and attempts to murder, harassment, assault, gang-rape etc. The victims are often brutally beaten, chained, stripped and hanged causing grievous injuries or death. One can include such attacks in the category of hate crime. In India, mob lynching has mostly happened because of cow meat-related incidents and Hindu-Muslim hate.

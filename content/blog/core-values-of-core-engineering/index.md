@@ -1,5 +1,5 @@
 ---
-title: Core value of core engineering"
+title: Core value of core engineering
 date: '2019-09-09T22:12:03.284Z'
 description: 'BOOK'
 ---
@@ -22,6 +22,7 @@ Time is one of the most valuable resources for everyone in the office. So if you
 ### Be fallacy free
 
 Most of us fall in the trap of logical fallacies in our arguments. In the Bootcamp, we practice rigorously in speaking drill to make our arguments free from [logical fallacies](https://owl.purdue.edu/owl/general_writing/academic_writing/logic_in_argumentative_writing/fallacies.html). We practice hard to inculcate the habit of making fallacy free arguments to sound convincing. Developing such speaking habits makes us reach an agreement in our arguments.
+
 Of course, you will need your technical expertise in making decisions on a daily basis. But it’s not just about being technically sound, to be a great software engineer. It’s about those aspects of software development which are not taught in any university, the soft skills.
 
 ### Baby Steps
@@ -30,7 +31,6 @@ The baby steps are about taking small steps to build the solution of a complex p
 
 For example, the customer requirements are not clear initially or the scale is unknown or you are not sure about the approach etc. Baby steps help in these cases. In the core engineering Bootcamp, we develop the habit of taking baby steps in solving some problem because that way we will be able to solve some immediate problem which will, in turn, help you solve the bigger problem. This way you will do frequent commits. Baby steps should be visible on your commit history and not only on pen and paper. Test-driven development helps you take baby steps as you start seeing the bigger problem in smaller chunks of testable behaviours.
 
-
 ### Being a team player
 
 You are not going to work alone. You will always work in a team. We learn the principles of how to work in a team. In the Bootcamp, we also have a team of boot campers. We learn the process required to work effectively in a team. It introduces us to the most basic things in a team, for example, conventions, wiki, communication channel, stand up meetings, timings, objectives, limitations, approachability etc. What tools your team uses, what conventions you follow should be properly documented. The wiki should be the ultimate source of truth for every team member.
@@ -38,6 +38,7 @@ You are not going to work alone. You will always work in a team. We learn the pr
 You won’t always write perfect code. No one writes perfect code. You will create technical debt and you cannot escape it. You take the decision that is best for the team and product. As an engineer, you have to decide what technical debts you can afford as a team. Some times you have to do the dirty work(e.g. not refactoring that code smell that you spotted) but you have to know how to repay as a team. By being a good team member is not only about being punctual or just doing your work. It is more than that. You should know what mistakes can you make and what mistakes you can afford. You need to be good at striking a balance between quality and delivering value.
 
 All of this can be cultivated when you have a belief in the processes that your team follows.
-Complex systems are such systems where output is not proportional to the input. Software development is a complex system. The success of your product does not depend proportionally on the number of features you deliver. All of these above themes that I discussed above, help you chunk down the problem in smaller manageable batch sizes. In the hope that you deliver one feature correct and hopefully you will deliver the product right. These aspects help you make the correct software the correct way.
+
+Complex systems are such systems where output is not proportional to the input. Software is a complex system. The success of your product does not depend proportionally on the number of features you deliver. All of these above themes that I discussed above, help you chunk down the problem in smaller manageable batch sizes. In the hope that you deliver one feature correct and hopefully you will deliver the product right. These aspects help you make the correct software the correct way.
 
 Thanks for reading. Feel free to connect with me on [Twitter](https://twitter.com/whoAbhishekSah) for any conversations on this.

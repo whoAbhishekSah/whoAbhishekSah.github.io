@@ -6,8 +6,7 @@ description: 'BOOK'
 
 A great book for anyone who wants to become a more effective and productive programmer! This book contains great tips on how to be one!
 
-
-## What is pragmatic, you may ask!
+## What is pragmatic, you may ask
 
 Being pragmatic is all about being skilled in business, caring about your craft. Skill and craft come from experience. It comes from facing failures, learning things and not being afraid of them. Take this to the field of programming.
 
@@ -19,9 +18,7 @@ They take responsibilities. They don’t make lame excuses. When they make a mis
 
 They invest in their knowledge portfolio every day. They keep on diversifying the knowledge portfolio.
 
-                                                    ...
-
-## A Pragmatic approach!
+## A Pragmatic approach
 
 There are some ideas which apply to almost every type of software development. A set of ideas and processes which help you build better software.
 
@@ -45,9 +42,7 @@ Use tracer bullets to find you want to achieve. The tracer bullet method involve
 
 Anything that you are not comfortable with could be prototyped. You can prototype architecture, new functionality, third party tools or UI design. Prototyping could be done in several ways. Prototyping is a learning experience. You build some disposable product, maybe using a totally different technology stack from the original product. You learn what you want to build using prototypes.
 
-                                                    ...
-
-## Basic Tools!
+## Basic Tools
 
 Every craftsman needs a good set of tool to be productive and carry out the job effectively. For a programmer, these are some of the basic tools that you need to get comfortable with :
 
@@ -59,9 +54,7 @@ Always use source code control. Git is the best(my opinion 😝 )!
 
 Develop debugging psychology. Don’t panic when an error popups. While debugging, don’t assume something, rather prove it. This will save you from the trouble of blaming the system for a fault that is likely to be your own (select isn’t broken!).
 
-                                                        ...
-
-## Pragmatic Paranoia!
+## Pragmatic Paranoia
 
 Accept the fact that you can’t write perfect software. Because it doesn’t exist. No one writes perfect software. You should be convinced of the fact that you also don’t write perfect software. Pragmatic Programmers code in defences against their own mistakes. Here are some defensive measures that you can take.
 
@@ -69,7 +62,7 @@ Accept the fact that you can’t write perfect software. Because it doesn’t ex
 
 Bertrand Meyer came up with this elegant concept. Before a function starts, it may have some expectation of the state of the world, and it may be able to make a statement about the state of the world when it concludes. Its a contract between a function and any potential caller:
 
-    If all the routine’s preconditions are met by the caller, the routine shall guarantee that all postconditions and invariants will be true when it completes.
+> If all the routine’s preconditions are met by the caller, the routine shall guarantee that all postconditions and invariants will be true when it completes.
 
 When you design by contract you be strict in what you will accept before you begin and promise as little as possible in return.
 
@@ -89,9 +82,7 @@ Use exceptions but don’t abuse your program in a messy unexceptional way. Use 
 
 Many of the time we forget to close the file we opened to write. This could hit us in pretty serious problems when scaled. Always have a consistent plan to deal with resource allocation and deallocation.
 
-                                                    ...
-
-#### Bend or Break
+## Bend or Break
 
 Your program should be flexible and adaptable in the face of an uncertain world. How can you achieve that?
 
@@ -99,17 +90,19 @@ Your program should be flexible and adaptable in the face of an uncertain world.
 
 Uncle Bob martin describes the law of Demeter as below:
 
-A method f of Class C should only call methods of
+A method _f_ of Class _C_ should only call methods of
 
-* C
+- _C_
 
-* An object created by f
+- An object created by _f_
 
-* An object passed as an argument
+- An object passed as an argument
 
-* An object held as an instance variable of C
+- An object held as an instance variable of _C_
 
-What happens when you don’t follow the law of Demeter? You end up having lots of coupled classes. This will restrict your flexibility. Orthogonality will be compromised. So follow the law of Demeter. Organise your code into modules and limit the interaction between them.
+What happens when you don’t follow the law of Demeter?
+
+You end up having lots of coupled classes. This will restrict your flexibility. Orthogonality will be compromised. So follow the law of Demeter. Organise your code into modules and limit the interaction between them.
 
 ### Metaprogramming
 
@@ -118,11 +111,6 @@ The systems that we are trying to build should be highly configurable. Use metad
 ### Temporal coupling
 
 There are various things in our day to day life which can be made concurrent. So are in software. Many of the tasks don’t depend on each other, so executing them concurrently can give a great deal of performance improvement. Temporal coupling is about analyzing workflow to find and improve concurrency.
-
-
-                                                ...
-
-
 
 ## While you are coding
 
@@ -144,18 +132,13 @@ Refactoring is a change made to the internal structure of software to make it ea
 
 A lot has been said and discussed on testing. You should write proper unit tests. Testing is more cultural than technical. It’s language and framework independent. Create a culture of testing.
 
-
-                                                        ...
-
-
 ## Before the project
 
 Most of the times when a project starts, requirements are not locked. Requirements are never fixed. They keep evolving as the customer and the developer get closer to understanding what they want to consume/build. Most of the times we need to dig for requirements by having one on one sessions with the consumer to identify the expectations rigidly.
 Promote abstractions. Talk in terms of abstractions because abstractions live longer than the implementations.
 
-
-                                                        ...
-
 So that was a brief summary of what makes a pragmatic programmer. I have started to adopt these pieces of advice as I care more of my craft now than ever.
+
+---
 
 Thanks for reading !!! Feel free to connect with me on [Twitter](https://twitter.com/whoAbhishekSah) for any conversations on this.
