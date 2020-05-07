@@ -1,6 +1,6 @@
 ---
 title: 'JSON vs Protocol Buffer'
-date: '2019-06-09T22:12:03.284Z'
+date: '2018-06-09T22:12:03.284Z'
 description: 'BOOK'
 ---
 
