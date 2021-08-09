@@ -1,8 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
-
-import { rhythm } from '../utils/typography';
 
 const Introduciton = () => {
   const data = useStaticQuery(graphql`
@@ -40,11 +37,11 @@ const Introduciton = () => {
         <br />I live in Bangalore and work at
         <a href="https://www.gojek.io/"> Gojek</a> as Product Engineer.
         <br />
-        <br />I am passionate about programming, writing, books, ideas and
-        knowledge.
-        <br />I love to read a lot to gather ideas and thoughts around subjects
-        I didn't know about. I am very active on Goodreads, where I track what I
-        am reading and what will be my next read.
+        <br />I am passionate about programming, writing and knowledge.
+        <br />
+        This zone is an attempt to outline my journey in tech and other
+        veriticals of my interest, right from the beginning. Hit me up on my
+        socials to connect !
       </p>
     </div>
   );
