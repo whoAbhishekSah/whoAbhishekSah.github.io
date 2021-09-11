@@ -4,7 +4,7 @@ module.exports = {
     title: 'Abhishek Sah',
     author: {
       name: 'Abhishek Sah',
-      summary: 'Software Engineer, Amature drummer & cook'
+      summary: '👨‍💻Ψ ☮️'
     },
     description: 'Portfolio website hosting mostly blogs, thoughts & ideas',
     siteUrl: 'http://abhisheksah.xyz',
