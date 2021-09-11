@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.75 'Merriweather','Georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.9);font-family:'Merriweather','Georgia',serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:Montserrat,sans-serif;font-weight:900;text-rendering:optimizeLegibility;font-size:2.5rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.73286rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1.4427rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;letter-spacing:0.140625em;text-transform:uppercase;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.83255rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;color:inherit;font-family:'Merriweather','Georgia',serif;font-weight:900;text-rendering:optimizeLegibility;font-size:0.75966rem;line-height:1.1;font-style:italic;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}ul{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;list-style:disc;}ol{margin-left:1.75rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:0.85rem;line-height:1.75rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1rem;line-height:1.75rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}blockquote{margin-left:-1.75rem;margin-right:1.75rem;margin-top:0;padding-bottom:0;padding-left:1.42188rem;padding-right:0;padding-top:0;margin-bottom:1.75rem;font-size:1.20112rem;line-height:1.75rem;color:hsla(0,0%,0%,0.59);font-style:italic;border-left:0.32813rem solid hsla(0,0%,0%,0.9);}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.75rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.75rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.75rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}li > ul{margin-left:1.75rem;margin-bottom:calc(1.75rem / 2);margin-top:calc(1.75rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.75rem / 2);}code{font-size:0.85rem;line-height:1.75rem;}kbd{font-size:0.85rem;line-height:1.75rem;}samp{font-size:0.85rem;line-height:1.75rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.16667rem;padding-right:1.16667rem;padding-top:0.875rem;padding-bottom:calc(0.875rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.75rem;color:hsla(0,0%,0%,0.9);font-weight:400;}blockquote cite:before{content:"— ";}ul,ol{margin-left:0;}@media only screen and (max-width:480px){ul,ol{margin-left:1.75rem;}blockquote{margin-left:-1.3125rem;margin-right:0;padding-left:0.98438rem;}}h1,h2,h3,h4,h5,h6{margin-top:3.5rem;}a{box-shadow:0 1px 0 0 currentColor;color:#007acc;text-decoration:none;}a:hover,a:active{box-shadow:none;}mark,ins{background:#007acc;color:white;padding:0.10938rem 0.21875rem;text-decoration:none;}a.gatsby-resp-image-link{box-shadow:none;}</style><style data-href="/styles.1408dc7708bac66216db.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.fading_line{display:block;border:none;color:#fff;height:1px;margin-bottom:30px;background:#000;background:-webkit-gradient(radial,50% 50%,0,50% 50%,350,from(#000),to(#fff))}</style><meta name="generator" content="Gatsby 2.20.35"/><link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-b3b573358bfc66d89e1e95dbf8319c09.css"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=e71fb5b3b15deab555cd37b35890788c"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=e71fb5b3b15deab555cd37b35890788c"/><title data-react-helmet="true">What makes Kafka awesome? | Abhishek Sah</title><meta data-react-helmet="true" name="description" content="Kafka"/><meta data-react-helmet="true" property="og:title" content="What makes Kafka awesome?"/><meta data-react-helmet="true" property="og:description" content="Kafka"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="whoabhisheksah"/><meta data-react-helmet="true" name="twitter:title" content="What makes Kafka awesome?"/><meta data-react-helmet="true" name="twitter:description" content="Kafka"/><link as="script" rel="preload" href="/webpack-runtime-7ccf7a8442e85d33de67.js"/><link as="script" rel="preload" href="/framework-a74044b4add31353c05b.js"/><link as="script" rel="preload" href="/app-160fc0684538f2e0a892.js"/><link as="script" rel="preload" href="/styles-6b8affa5cc22cb60670e.js"/><link as="script" rel="preload" href="/1bfc9850-1e2bd78bf4eda26e78b2.js"/><link as="script" rel="preload" href="/245bf1604424122403b4913652a06fc0bd1bdae4-9b42011b8afeb6815139.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-jsx-e9b7e68fb988f32d09cd.js"/><link as="fetch" rel="preload" href="/page-data/what-makes-kafka-awesome/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header><h3 style="font-family:Montserrat, sans-serif;margin-top:0"><a style="box-shadow:none;color:inherit" href="/">Abhishek Sah</a></h3></header><main><article><header><h1 style="margin-top:1.75rem;margin-bottom:0">What makes Kafka awesome?</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem">May 07, 2020</p></header><section><p><a href="https://kafka.apache.org/">Kafka</a> is one of those software that are in the foundations of most of the data-driven companies e.g. LinkedIn, Uber, Spotify, Slack, Gojek etc. Kafka solves the problem of high throughput real-time data streaming with minimal latency. It’s flexible and lean architecture has helped companies scale massively without worrying about the quality and latency of the data pipeline. In this blog, we will go through internals of mighty Kafka and will find out what makes Kafka so awesome.</p>
+<p>Let’s begin with a subtle introduction.</p>
+<h2>What is Kafka</h2>
+<p>Kafka is a distributed streaming platform. To quote from the official website,</p>
+<p>A streaming platform has three key capabilities:</p>
+<ul>
+<li>Publish and subscribe to streams of records, similar to a message queue or enterprise messaging system.</li>
+<li>Store streams of records in a fault-tolerant durable way.</li>
+<li>Process streams of records as they occur.</li>
+</ul>
+<p>Kafka is used to build data pipelines, to move data among systems or applications. Kafka can store the data as well.</p>
+<p>By “data”, we mean any form of raw data or event that needs to be sent across applications or services. For example, user activity events(page views, button clicks, logins, sign ups, likes, comments etc.) or operational metrics such as errors in applications, crashes, system usage etc.</p>
+<p>These raw events are produced by users via their interaction with applications and kafka pipelines can be used to send(stream) them at desired places(applications/services). The consuming applications or services can decide to process this raw data in real time or store it for later processing.</p>
+<p><strong>Why do we need to stream these raw data/events in the first place?</strong></p>
+<p>Because this helps data-driven companies make efficient decisions. Companies can use this data to develop internal applications and microservices to improve their search relevance, recommendation systems, and target appropriate ads to customers etc.</p>
+<p>As the use cases grow and companies scale, the user facing applications produce more and more data. Streaming that data to various internal applications and services without compromising scale is the one of the onus of data engineering.</p>
+<p>This data can be of enormous volume. Think of the scale at which social media giants like Facebook, LinkedIn operate and storing all major events done by users on their website and mobile applications. This becomes billions of events every day.</p>
+<p>Streaming such enormous amount of data maintaining minimum latency is no simple job. Kafka is very good at this(we will see how). Moreover, Kafka gives you the ability to perform processing on the stream. One example of such real-time processing is calculating <a href="https://www.davemanuel.com/investor-dictionary/surge-pricing/">surge pricing</a> in apps(like Uber).</p>
+<p>Surge pricing is calculated by taking into consideration the current demand and current supply. These two metrics are used in real-time to calculate how much surge price to add to the trip. For example, Surge price in Uber during rains in the evening.</p>
+<p>The real-time usage of log data brings several challenges. One of which is high throughput. Kafka gives the ability to perform such real-time processing with minimal latency. Kafka is scalable, distributed, supports high throughput, supports real-time consumption of data and provides a <a href="https://kafka.apache.org/documentation/#api">rich set of APIs</a> to make developers life easy.</p>
+<h2>Kafka Architecture</h2>
+<p>Kafka’s architecture is fairly simple. There are a few logical concepts that you need to understand in order to deep dive into Kafka. Kafka runs on <a href="https://aws.amazon.com/pub-sub-messaging/">Pub/Sub Model</a>. Which means, there are entities which produce messages and put in some designated places and there are entities which subscribe to these places.</p>
+<p><strong>Topic:</strong> Stream of messages of a particular type is called a topic. For example, a BookingLog Topic for Uber will keep all messages of trip booking type made on the Uber app.</p>
+<p><strong>Producer:</strong> The entity which produces messages to a topic. The producer application constructs the messages and sends it to Kafka to store that message in a particular topic.</p>
+<p><strong>Broker:</strong> Brokers are servers where the published messages are stored.</p>
+<p><strong>Consumer:</strong> The entity which consumes data that was put in a topic(from the Brokers). Consumers consume messages inside a topic from Broker via a bridge called Message Streams.</p>
+<p>Given these basic terminologies, you would have guessed the basic flow of data in Kafka.</p>
+<p>Producers produce messages(data) in topics. Brokers store those data. Consumers can consume data from these topics.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/86628d1bd5c7b4c66bf5da5effb8d0b0/dd507/1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 18.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsSAAALEgHS3X78AAAAuklEQVQI13WOzQqCQBSFfYgWrUIpgra9TpteLSinH6x0bfgKLYJsoY6CoUj+zIy/WNMoGW26fBzu4Z4Dl6PtvFo9P4qdgY8WOfxBMomX1U2+LXBRFCUIM6uH2WRrD1ZQECEPIC92gIYhgL2FOdc8Sp8kzTAheZ5zCCG20brSAzyVHAHAEYuuO8BHxxu7v7RmqluUZRzHYRgmScL9vm2gSnWzk4Nl3VOuvqz7ys3fX+7MMjQ3Zdcgr7/5N32Kwi2XMPMPAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Producer-Consumer"
+        title="Producer-Consumer"
+        src="/static/86628d1bd5c7b4c66bf5da5effb8d0b0/fcda8/1.png"
+        srcset="/static/86628d1bd5c7b4c66bf5da5effb8d0b0/12f09/1.png 148w,
+/static/86628d1bd5c7b4c66bf5da5effb8d0b0/e4a3f/1.png 295w,
+/static/86628d1bd5c7b4c66bf5da5effb8d0b0/fcda8/1.png 590w,
+/static/86628d1bd5c7b4c66bf5da5effb8d0b0/efc66/1.png 885w,
+/static/86628d1bd5c7b4c66bf5da5effb8d0b0/c83ae/1.png 1180w,
+/static/86628d1bd5c7b4c66bf5da5effb8d0b0/dd507/1.png 1528w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Topics can be of very high throughput depending on the use cases. BookingsLog alone is a very high throughput topic if you think about Uber’s scale. So to balance the load, topics are further divided into Partitions.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 586px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2769fcc22eb4e863ad7225e9dfe04ed5/a76f4/2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 90.54054054054053%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAIAAADUsmlHAAAACXBIWXMAAAsSAAALEgHS3X78AAACHUlEQVQ4y52US08TURTH5xOY6EJjsUVi8FUlMepC4+s76MpvYCSNG12pJLpQWfgJXIB2ppQKppi4ML4SQIhQUSriRDpPKsO8q7TTed3rGfoaUUPD5Lc48z/33HvPmX+GwFt6fIwRxgREOaV6e1a71R43Z7S+WY02HSgkZMs7lRV3PWGiJLtnM2IUu32gcH1ahUqEMPHVsLso7mCajw/zhzfjSIaPkewg/ROKPYSCa9/9qB8bEU4+E09sYFQICCmwpmdEuPRqpVj2cK1naF21PKnira4jlV2ligqy+S6Xn6EZTvslW/5qIytXvOU1F9bXi20ffS85i4bzrQ1ow8lrNuxSL4YB7E9zbfa8L8VdfLki1Yq/6HYnxcUz/NFMkAsD24EeDyk9T/kuiqWWGgPTq/6F58s7HzORJLs7RITkokNiNCVA0BQ7SHbbQKF3UobvFHwq2GPBsPs/6fdD9M+bfVPFxIuFG2+W7nyQHnw2mql7wJxeN8l/HYhcvKZiB27o/sOeqGHPt8XK1Ql5A72TSmJaT0xpELTECfnKuHztvUKbdnDyj7J7fFSMJJlOKnBfGDAsECNbyt4Uu2OwAN6uHU7A7buH+O40Dw498Cd/K4eG+Y4k+2ix1LLnw3njzJgIMz8f4mxWAM6NiUBThDWns+Ll1xKYrDUw0/YVy1PXUSqubiNeLY3P5XM0AwG8gljLapYHncpNe3poa38E/BuB2D/72m7hNQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Partition"
+        title="Partition"
+        src="/static/2769fcc22eb4e863ad7225e9dfe04ed5/a76f4/2.png"
+        srcset="/static/2769fcc22eb4e863ad7225e9dfe04ed5/12f09/2.png 148w,
+/static/2769fcc22eb4e863ad7225e9dfe04ed5/e4a3f/2.png 295w,
+/static/2769fcc22eb4e863ad7225e9dfe04ed5/a76f4/2.png 586w"
+        sizes="(max-width: 586px) 100vw, 586px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Each broker stores one or more partitions of various topics.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a4928c83ae4cfed322b03f1484bae121/29007/3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.21621621621622%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAABV0lEQVQY03VRz0sCQRjdv6C7RaduQp07BknHDlLQqUOXOgSeu3fv0LmCNDKlHxCu0A8UDKFTEkUQrqtW47qrTjntujszzvbNeinMx2Pgm29mvvfeKIwxypg3RNikAfgIwEUF2v4IUE9CCF8MQXYpVVxKb1EvpZEz/Rt4GqxQ5lDP9eT4f9/lwoemomEnnK6FEvpEohI61Mbj2mSiMnagxYoWnGnb3tZ9ay1vrBfMATcK5mrO2H36BN0KSM8jJ1kmRy/tvRLaL6H4s3VSJtm67VHaJO58BoVT9el0NZysAGdS+tRxNVZs9TlTPrpu9NqYu3yPZFBEbURUtKCi2fO37Qfs8yCzvm9zH9uugbsG/moR22aCMCFlN0lv885cuWksZ2uLF6/AJVWPXqGdR8yCxAKP4q9lWcq0+5wLIZMHD7jTsUwTxoEkh1IX8voFEGFZluM4g38C/AD12KTyT3EBAAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Topic BookingLog split into 3 partitions &amp; stored on 2 brokers."
+        title="Topic BookingLog split into 3 partitions &amp; stored on 2 brokers."
+        src="/static/a4928c83ae4cfed322b03f1484bae121/fcda8/3.png"
+        srcset="/static/a4928c83ae4cfed322b03f1484bae121/12f09/3.png 148w,
+/static/a4928c83ae4cfed322b03f1484bae121/e4a3f/3.png 295w,
+/static/a4928c83ae4cfed322b03f1484bae121/fcda8/3.png 590w,
+/static/a4928c83ae4cfed322b03f1484bae121/efc66/3.png 885w,
+/static/a4928c83ae4cfed322b03f1484bae121/c83ae/3.png 1180w,
+/static/a4928c83ae4cfed322b03f1484bae121/29007/3.png 1600w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Partitions of a topic are simply Log files. Think of all the partitions of a topic as a file on the storage system of the Brokers. Depending on the usage, this partition’s(Log file’s) size can vary. It can be very large for some high throughput topics. So it is <a href="http://man7.org/linux/man-pages/man1/split.1.html">split</a> into multiple smaller files, called <strong>Segment Files</strong>.</p>
+<p>A partition now logically looks like:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a9db5c497734c6f25476158324c2b5e8/29007/4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAABfElEQVQY0x2QWU/CUBCF+6d98cHENTzof1AEAQlopQstlJ3S/XahhULZWlDBuGEUkkpwMLkP95tzZubci/X682hcSNzKybS83W4t+/Ey1oonpTscASrq5ComXN+IZN4CbPBe9EaEClfuAmI0ayM9WK/DyAWTuUcgm+3Zx+fPcYSimHal1ut7i/lieXCcK1XcAteZzd794G1vP9PtPWO8MGi2BvGkXG/2y1UXGUGDH8QSkqyOofkfvXhKNszpA2GoyK83vVRaFcQRGLCWOATT0RnJFB1BGmloghPG4SnZ5L1yzVW0cRZHJxFK032m4IjyKJ1VI+cMXAxrisEeURqBQ1LG0KCiCQiQ37JnLNdRdR/q2Xt9MHwhaEvRJoB4zrCdRxiHwTwy39bNgKDNUtWFQ7OQ1oc48Css53CVjqbvnsBVutBf5/saGmdwtNv88bliiyZBKcWSvfxav75904wOWKo6q3X4NF+StJajlGrdDX83fvBKUCqovOCF4eYPgcJLsqfHMiwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Partition"
+        title="Partition"
+        src="/static/a9db5c497734c6f25476158324c2b5e8/fcda8/4.png"
+        srcset="/static/a9db5c497734c6f25476158324c2b5e8/12f09/4.png 148w,
+/static/a9db5c497734c6f25476158324c2b5e8/e4a3f/4.png 295w,
+/static/a9db5c497734c6f25476158324c2b5e8/fcda8/4.png 590w,
+/static/a9db5c497734c6f25476158324c2b5e8/efc66/4.png 885w,
+/static/a9db5c497734c6f25476158324c2b5e8/c83ae/4.png 1180w,
+/static/a9db5c497734c6f25476158324c2b5e8/29007/4.png 1600w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Partition P2 split into 4 segment FilesLet’s say Partition P2 is the set of segment files S1, S2, S3 and S4. Any new message produced to Partition P2 will be written to the last segment file(here, say, S4).</p>
+<p>This is to be noted that, at first the segment file lives in the memory of a broker. After a predefined threshold is reached, then only the segment file is flushed to the disk i.e. written on the secondary storage. There are two such predefined thresholds:</p>
+<ul>
+<li>A certain number of messages have been published from the publisher of that partition.</li>
+<li>Certain time has elapsed since last published event.</li>
+</ul>
+<p>The messages are only exposed to consumers when they are written to the disk. Messages residing in the memory of Brokers are never exposed.</p>
+<h3>Message format</h3>
+<p>Every message in Kafka is stored with an offset. This is so because the messages can be of varying size. So offset is decided by the size of the messages in the segment files.</p>
+<p>For example, Let’s say for segment file S1, three messages came from the producer which are of size 20bytes, 40 bytes and 20 bytes.</p>
+<p>Then the ordering of message in segment file with offset typically looks like the image below with offset of M1 as 0, offset of M2 as 20 and offset of M3 as 40.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9f139a53e0efd7d5291462bf5344a922/d777c/5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 27.027027027027025%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAAsSAAALEgHS3X78AAAAj0lEQVQY012OUQ6EIBBDuf8BOYKJkPghgoCA+5ZGN9l+YKfTqTX3g+u6Sil6c85lotYqRSKoE5AxhnmPmfHFGHvv53m21ljjkwKXgZctWRh+x/iY932Hs8MtEkJ4DYhcEtcmDKkMRKIqWwd/tSEpJTlV8HvMx1q7rutxHKqKdVmW8UCd+TOlnHNq4b3ftu0DuWAkISWdWO8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="A typical order of messages inside a segment file."
+        title="A typical order of messages inside a segment file."
+        src="/static/9f139a53e0efd7d5291462bf5344a922/fcda8/5.png"
+        srcset="/static/9f139a53e0efd7d5291462bf5344a922/12f09/5.png 148w,
+/static/9f139a53e0efd7d5291462bf5344a922/e4a3f/5.png 295w,
+/static/9f139a53e0efd7d5291462bf5344a922/fcda8/5.png 590w,
+/static/9f139a53e0efd7d5291462bf5344a922/efc66/5.png 885w,
+/static/9f139a53e0efd7d5291462bf5344a922/c83ae/5.png 1180w,
+/static/9f139a53e0efd7d5291462bf5344a922/d777c/5.png 1555w"
+        sizes="(max-width: 590px) 100vw, 590px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Here you can see the offsets are in increasing order but they are not consecutive.</p>
+<p>Traditionally, message queue systems (such as RabbitMQ) use message ID instead of offset. The message ID does the one-to-one mapping of Message’s location on disk. This allows the user to do random indexing of the messages. Random access to messages is a <a href="https://www.geeksforgeeks.org/difference-between-seek-time-and-rotational-latency-in-disk-scheduling/">seek</a> intensive operation. This is a costly IO operation affecting latency. Kafka avoids using message IDs.</p>
+<p>Offsets are also used as consumers acknowledgements. If a consumer acknowledges an offset x, it is assumed that the consumer has consumed all messages with offset &#x3C; x.</p>
+<h3>Managing partitions on the broker</h3>
+<p>It’s time to understand how brokers store and manage any partition. As we have understood, partitions are a set of segment files. Every segment file starts with some message. Every message is identified with a message offset.</p>
+<p>Brokers store a sorted table in memory which basically keeps the first offset of each segment file.</p>
+<p>Let’s see it this way. Let’s say for partition P1, there are 5 segment files(S1, S2, S3, S4 and S5). The first message in S1 has offset 0. Likewise, first messages of files S2, S3, S4 and S5 have offsets 1000, 2000, 2500 and 2700 respectively.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 306px;"
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/79d1bd16b9ce30ab7ade56a2422aabb0/98b92/6.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 138.51351351351352%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAIAAADuuAg3AAAACXBIWXMAAAsSAAALEgHS3X78AAACL0lEQVQ4y42USY/aQBCF/f+FRACJU+CAOMEBInFCCCQOCMQqdgggCOuw70vY8uHOgI3tTN6hVe6qLr96XdVSKBRqt9v1ev2nHlqtlu5+o9FIp9NSs9m83++32+2uh+PxqN0UwfP5XOKfWJfL5abA9Xplc71eOxyO4XCIzc6bdzweS3AQPm3u0+kUDAaXy+UbNWFPJhOpUqmIuN8anM9n4ljf9gnmZzCSwuFwt9ul8pYaTRkII4w3Fxpns1kJt5Fgok4jwabTqY5gov5UKhWJRH7I8Pl8+/3+me4lmNHhfD7v9/tR+7uM7Xarc1hXbQGlclraD7Wj0Si6dTqdX2ogSecTfCoDsHu9XqFQkEqlEpkOh8NRjScXUYvSRTB0+v2+Dm3BqlqtohnpKT6XyymZv2jXajUsfFcF2HG5XHa73WazmUwms9lMqwpd8bL+FUz3nvmkNrT4kIGhpTabzaR4PM58jEajDzUWi8XsEwQoXQTDGcpSIpEgjq2xGhwQ5+cylC6CaS8aRIe2sEVGRoqThOrTNhLM7XajltPp/CZjtVq9CUZqQ8G4nmKxmEwmmZ5MJqO9qsefuczNZvOs7Qk6Ybfbse5lKF0EUw6DKcViMUoaDAZDNRhyelCsQBmADWdekX/NsxFetHUfQHZISmNSMAHlcplmfvb51yPp9XoDgYDH47FarRaLRcyzyPvqbaOnF6lFS9RlCLX/989f1vx4wyiMidFeFb5nb2Nrr4rX4g+3Axv3rYJ7XgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Broker&#39;s in-memory table"
+        title="Broker&#39;s in-memory table"
+        src="/static/79d1bd16b9ce30ab7ade56a2422aabb0/98b92/6.png"
+        srcset="/static/79d1bd16b9ce30ab7ade56a2422aabb0/12f09/6.png 148w,
+/static/79d1bd16b9ce30ab7ade56a2422aabb0/e4a3f/6.png 295w,
+/static/79d1bd16b9ce30ab7ade56a2422aabb0/98b92/6.png 306w"
+        sizes="(max-width: 306px) 100vw, 306px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>The broker will store an in-memory table which keeps the offset of the first message in each segment file. Here : 0, 1000, 2000, 2500, 2700</p>
+<p>Table of starting offset of each segment fileAny new message which comes, if stored in S5, won’t affect this table. As soon as, a new segment file appears, this table will be updated with the offset of the first message in the new segment file.</p>
+<p>This table is used to find the segment file which contains the offset asked by the consumer.</p>
+<h3>Consumption of messages</h3>
+<p>Consuming messages is fairly simple. The series of events are:</p>
+<ul>
+<li>Consumers send a pull request to brokers. In this request, there are two things: Consumers specify the <em>offset to begin with</em>, and an <em>acceptable number of bytes in the message</em>.</li>
+<li>Broker on receiving the offset to begin calculates which segment file has the message with asked offset. Broker searches the above table for the address of the segment file to which the message belongs.</li>
+<li>Broker fetches the data from that segment file and sends to the consumer.</li>
+<li>The consumer consumes this data.</li>
+<li>The consumer sends the next offset in the new pull request.</li>
+</ul>
+<h3>Efficiency of Kafka</h3>
+<p>Kafka is considered the best real-time streaming platform out there. The efficiency speaks for itself in various benchmarking tests. This efficiency results from several design decisions(rather unconventional).</p>
+<h4>Storage Efficiency</h4>
+<p>The first one is the use of offsets instead of message-ids which saves the cost of seek intensive random accesses. On top of that, keeping an index of the offsets of starting message in each segment file makes consumption from a partition fairly efficient.</p>
+<p>The second unconventional choice that we see in Kafka is avoiding any caching in Kafka Layer. Kafka avoids caching every message in memory at the process level. Instead, it relies on the underlying file system cache. This offers multiple benefits.</p>
+<p>First, it avoids double buffering. Modern operating heavily use main memory for disk caching. A modern OS will happily divert all free memory to disk caching with little performance penalty when the memory is reclaimed. All disk reads and writes will go through this unified cache. So even if a process maintains an in-process cache of the data, this data will likely be duplicated in OS page cache, effectively storing everything twice. Although there could be a debate on when and how to process level caching is useful. Read this <a href="https://queue.acm.org/detail.cfm?id=1563874">ACM article</a> for a thorough analysis.</p>
+<p>Secondly, this cache(the file system cache) will stay warm even if the broker service is restarted, whereas the in-process cache will need to be rebuilt in memory.</p>
+<p>The third benefit is that no cache at process level means, less overhead in Garbage collection, giving efficiency in VM based languages.</p>
+<p>The fourth benefit comes from the use of traditional caching heuristics like write-through cache. Since both consumer and producer access the segment files sequentially, normal caching heuristics present in most OS works fine.</p>
+<h4>Network Efficiency</h4>
+<p>Consumption of messages from the File system involves fetching message from secondary storage and sending all the way to network sockets. This typically involves reading data from the storage to page cache, copying page cache to application buffer, copying application buffer to kernel buffer and finally sending kernel buffer to a socket. This involves 4 data copying calls and 2 system calls.</p>
+<p>Kafka uses the <a href="http://man7.org/linux/man-pages/man2/sendfile.2.html">sendfile API</a> available in Linux which does the same thing in 2 data copying calls and 1 system call. This optimized API results in the fast consumption of data.</p>
+<h4>Broker’s design efficiency</h4>
+<p>Kafka Brokers are stateless. It means that a broker doesn’t know which consumer has consumed till what offset. The consumer itself keeps track of the offset. It reduces overhead from the Broker. But there are cons as well. Deleting messages becomes difficult since the broker doesn’t know if all consumers have consumed that message. For this, Kafka gives a time-based SLA where retention policy can be configured for brokers.</p>
+<p>Brokers being stateless gives a side benefit to consumers to deliberately choose to rewind back to an old offset and re-consume(if the messages have not exceeded retention period, of course). Though, it is a violation of queue but has proved as an essential feature. For example, if consumer application feeding on data from Kafka has some bugs, then the data can be replayed after the bug has been resolved.</p>
+<h3>Distributed Consensus</h3>
+<p>Let’s see how producers and consumers behave in a distributed setting.</p>
+<p>The producers produce data to a topic stored in Brokers and consumers consumer from these topics. Producers need to decide which partition to produce data. A partition can be randomly selected by the producer or by using a partitioning function.</p>
+<p>Consumers to a topic are put in a group called “Consumer Group”. Each message m of Topic T is delivered to only one consumer in the consumer group. At any time, all messages from one single partition are consumed by a single consumer. Different consumer groups independently consume messages from topics. No coordination is required among them. But within a consumer group, coordination is required.</p>
+<p>The leader inside a consumer group is decided by a separate entity called <a href="https://zookeeper.apache.org/">Zookeeper</a>. Kafka uses Zookeeper as a configuration store.
+Zookeeper does these 3 things for Kafka.</p>
+<ul>
+<li>Detecting the addition and removal of brokers and consumers</li>
+<li>Triggering re-balance process in each consumer when the above event occurs</li>
+<li>Maintaining track of consumed offset of each partition</li>
+</ul>
+<p>Re-balancing, whenever required, is taken care of by zookeeper by running a re-balancing algorithm.</p>
+<p>Kafka uses Zookeeper to maintain 4 types of registries(config stores)for various purposes. Let’s quickly see what each registry stores.</p>
+<p><strong>Broker registry:</strong> Stores information about brokers. It stores the host and port of the broker and the set of topics and partitions stored in the broker.</p>
+<p><strong>Consumer Registry:</strong> Stores consumer group of each consumer and set of topics each consumer is subscribing.</p>
+<p><strong>Ownership Registry:</strong> Stores one path for every subscribed partition and the id of the consumer currently consuming for this
+partition. This consumer is said to own the partition.</p>
+<p><strong>Offset Registry:</strong> Stores for each partition, the offset of the last consumed message.</p>
+<p>The first three registries are <strong>ephemeral</strong> i,e. if the creating client is gone, these path created in corresponding registries is removed from by zookeeper server. Offset registry is <strong>persistent</strong>.</p>
+<p>Each consumer has a watcher on both Consumer registry and Broker registry. Whenever broker set changes or consumer group changes or the startup of a consumer happens the watcher notifies consumers to initiate a re-balancing algorithm process. This is to determine new subsets of partitions it should subscribe from. To learn more about the re-balancing algorithm, read this manual.</p>
+<h3>Delivery Guarantee</h3>
+<p>Kafka only guarantees at least once delivery. By design, they didn’t want to go for the exactly-once guarantee, because that would have retired efforts in two-phase commits which were not necessary requirement for Kafka.</p>
+<p>Kafka also doesn’t guarantee to order of the messages. Since messages go to different partitions, can be consumed from different partitions as per the consumers want. So there is no inherent ordering of messages by design in Kafka. Consumers itself will have to take care of the ordering of the messages.</p>
+<p>Kafka also takes care of the data corruption by giving Cyclic redundancy check at the message level. This allows you to check network error.</p>
+<hr>
+<p>If you have been following up this far, thanks for reading. This blog is inspired by the <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf">Kafka white paper</a>. I would suggest the readers explore <a href="https://cwiki.apache.org/confluence/display/KAFKA/Kafka+papers+and+presentations">this wiki</a> to learn some more detailed concepts about Kafka.</p>
+<p>Feel free to comment below your thoughts or connect with me on <a href="https://twitter.com/whoAbhishekSah">Twitter</a> for any conversations on this blog.</p></section><hr style="margin-bottom:1.75rem"/><footer><div style="display:flex;margin-bottom:4.375rem"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px;margin-right:0.875rem;margin-bottom:0;min-width:50px;border-radius:100%"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAAB15Jxi2KlPJoEZhH/xAAdEAACAgIDAQAAAAAAAAAAAAABAgATERIDFCIx/9oACAEBAAEFAuXetLFf1OzkXaG5YwwWMHz/xAAWEQEBAQAAAAAAAAAAAAAAAAARASD/2gAIAQMBAT8BgY//xAAWEQADAAAAAAAAAAAAAAAAAAARICH/2gAIAQIBAT8BpT//xAAcEAABAwUAAAAAAAAAAAAAAAABABESECAiMaH/2gAIAQEABj8CLOgJSBoZ8WS3Z//EABsQAAIDAQEBAAAAAAAAAAAAAAABESFRQTFx/9oACAEBAAE/IV8E9IW7iw+GJkaVQp6XCWzELUMmR2P/2gAMAwEAAgADAAAAECMPvv/EABgRAQEAAwAAAAAAAAAAAAAAAAEAEBEx/9oACAEDAQE/EBsXD2b/xAAYEQEAAwEAAAAAAAAAAAAAAAABABARMf/aAAgBAgEBPxBcAmw5X//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQVFhkcH/2gAIAQEAAT8QG9FWDovMLpcgLhTmnWpXP2EM3ZyW9V9hmbspWl8wHTfyEAJUvblgm3tzqKGWf//Z" alt="Abhishek Sah" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/static/bd2c03a4ffc2931716301aae0eade2cb/99438/profile-pic.jpg 1x,
+/static/bd2c03a4ffc2931716301aae0eade2cb/aba1d/profile-pic.jpg 1.5x,
+/static/bd2c03a4ffc2931716301aae0eade2cb/b315d/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/static/bd2c03a4ffc2931716301aae0eade2cb/99438/profile-pic.jpg 1x,
+/static/bd2c03a4ffc2931716301aae0eade2cb/aba1d/profile-pic.jpg 1.5x,
+/static/bd2c03a4ffc2931716301aae0eade2cb/b315d/profile-pic.jpg 2x" src="/static/bd2c03a4ffc2931716301aae0eade2cb/99438/profile-pic.jpg" alt="Abhishek Sah" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Abhishek Sah</strong> <br/>👨‍💻Ψ ☮️<!-- --> <br/><a href="https://twitter.com/whoabhisheksah">Twitter</a></p></div></footer></article><nav><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/no-silver-buttes-indeed/">← <!-- -->No Silver Bullets indeed!</a></li><li><a rel="next" href="/kafka-scaling/">Horizontally scaling up a Kafka cluster <!-- --> →</a></li></ul></nav><div shortname="abhisheksah" config="[object Object]" id="disqus_thread"></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-147358309-2', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/what-makes-kafka-awesome/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-160fc0684538f2e0a892.js"],"component---src-pages-404-jsx":["/component---src-pages-404-jsx-558ebe953c674a6b6f9c.js"],"component---src-pages-index-jsx":["/component---src-pages-index-jsx-53fe6f7d00d84a9aae05.js"],"component---src-templates-blog-post-jsx":["/component---src-templates-blog-post-jsx-e9b7e68fb988f32d09cd.js"]};/*]]>*/</script><script src="/component---src-templates-blog-post-jsx-e9b7e68fb988f32d09cd.js" async=""></script><script src="/245bf1604424122403b4913652a06fc0bd1bdae4-9b42011b8afeb6815139.js" async=""></script><script src="/1bfc9850-1e2bd78bf4eda26e78b2.js" async=""></script><script src="/styles-6b8affa5cc22cb60670e.js" async=""></script><script src="/app-160fc0684538f2e0a892.js" async=""></script><script src="/framework-a74044b4add31353c05b.js" async=""></script><script src="/webpack-runtime-7ccf7a8442e85d33de67.js" async=""></script></body></html>
