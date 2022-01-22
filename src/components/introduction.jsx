@@ -1,5 +1,13 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
+
 import { useStaticQuery, graphql } from 'gatsby';
+
+const iconStyle = {
+  textDecoration: 'underline',
+  margin: '5px',
+  boxShadow: 'none'
+};
 
 const Introduciton = () => {
   const data = useStaticQuery(graphql`
@@ -35,13 +43,30 @@ const Introduciton = () => {
         Hi, I am Abhishek !
         <br />
         <br />I live in Bangalore and work at
-        <a href="https://www.gojek.io/"> Gojek</a> as Product Engineer.
+        <a href="https://www.gojek.io/"> Gojek</a> as Product Engineer and love
+        to contribute in Open source.
         <br />
-        <br />I am passionate about programming, writing and knowledge.
+        <br />I am passionate about programming, writing and knowledge. Most of
+        my work is on
+        <a href="https://github.com/whoAbhishekSah/" style={iconStyle}>
+          Github <FaGithub />
+        </a>
+        .
         <br />
-        This zone is an attempt to outline my journey in tech and other
-        veriticals of my interest, right from the beginning. Hit me up on my
-        socials to connect !
+        <br />I mostly write blogs on my technical learnings and interesting
+        stories from workplace. If you're a tech recruiter, you might be
+        interested in my{' '}
+        <a
+          href={require('../../Abhishek_Sah_resume.pdf')}
+          style={{
+            fontStyle: 'italic'
+          }}
+          target="_blank"
+        >
+          resume
+        </a>{' '}
+        😄.
+        <br />
       </p>
     </div>
   );

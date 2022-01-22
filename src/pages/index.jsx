@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
   const years = Object.keys(postsIndexedByYears).sort().reverse();
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Blogs" />
       <Introduction />
       <h3 align="center">Blog posts</h3>
       {years.map((year) => {
