@@ -31,10 +31,7 @@ const SocialIcons = () => {
         <a href="https://github.com/whoAbhishekSah/" style={iconStyle}>
           <FaGithub />
         </a>
-        <a
-          href="https://www.linkedin.com/in/abhishek-sah-1169a5109/"
-          style={iconStyle}
-        >
+        <a href="https://www.linkedin.com/in/whoabhisheksah/" style={iconStyle}>
           <FaLinkedin />
         </a>
       </div>
