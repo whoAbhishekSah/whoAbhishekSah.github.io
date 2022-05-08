@@ -43,8 +43,13 @@ const Introduciton = () => {
         Hi, I am Abhishek !
         <br />
         <br />I live in Bangalore and work at
-        <a href="https://www.gojek.io/"> Gojek</a> as Product Engineer and love
-        to contribute in Open source.
+        <a href="https://instabase.com"> Instabase</a> as Production Engineer
+        and love to contribute in Open source.
+        <br />
+        <br />
+        Previously I've worked at{' '}
+        <a href="https://github.com/odpf"> Gojek Data Platform</a> team building
+        alert orchestration and managing data infrastructure.
         <br />
         <br />I am passionate about programming, writing and knowledge. Most of
         my work is on
