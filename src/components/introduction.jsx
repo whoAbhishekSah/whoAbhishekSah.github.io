@@ -43,11 +43,11 @@ const Introduciton = () => {
         Hi, I am Abhishek !
         <br />
         <br />I live in Bangalore and work at
-        <a href="https://instabase.com"> Instabase</a> as Production Engineer
+        <a href="https://www.pixxel.space/"> Pixxel</a> as DevOps Engineer
         and love to contribute in Open source.
         <br />
         <br />
-        Previously I've worked at{' '}
+        Previously I've worked at <a href="https://instabase.com/"></a>Instabase {' '} as a Site Relibility Engineer and
         <a href="https://github.com/odpf"> Gojek Data Platform</a> team building
         alert orchestration and managing data infrastructure.
         <br />
