@@ -47,8 +47,8 @@ const Introduciton = () => {
         and love to contribute in Open source.
         <br />
         <br />
-        Previously I've worked at <a href="https://instabase.com/"></a>Instabase {' '} as a Site Relibility Engineer and
-        <a href="https://github.com/odpf"> Gojek Data Platform</a> team building
+        Previously I've worked at <a href="https://instabase.com/">Instabase </a> as a Site Relibility Engineer and
+        <a href="https://github.com/raystack"> Gojek Data Platform</a> team building
         alert orchestration and managing data infrastructure.
         <br />
         <br />I am passionate about programming, writing and knowledge. Most of
