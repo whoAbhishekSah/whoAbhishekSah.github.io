@@ -1,7 +1,7 @@
 ---
-title: 'Google IAP Auth automation'
-date: '2023-07-14T22:14:03.284Z'
-description: 'STORY'
+title: 'Google IAP auth automation for CLI apps'
+date: '2023-07-15T22:14:03.284Z'
+description: 'oauth'
 ---
 
 This blog takes inspiration from a significant automation project I undertook at Gojek in 2021. It has been pending publication for a while, mainly due to my lack of diligence. However, I have now resolved to be more active in blogging, starting with the unpublished drafts I have accumulated. Without further ado, let's dive into it.
