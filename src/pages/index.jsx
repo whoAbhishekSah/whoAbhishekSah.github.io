@@ -5,10 +5,11 @@ import Introduction from '../components/introduction';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
-import { indexPostsByYear } from '../utils/helper';
+import { getShortDate, indexPostsByYear } from '../utils/helper';
 
 const renderPost = (node) => {
   const title = node.frontmatter.title || node.fields.slug;
+  const dateOfPublication = getShortDate(node.frontmatter.date);
   return (
     <article key={node.fields.slug}>
       <li
@@ -16,9 +17,8 @@ const renderPost = (node) => {
           marginBottom: rhythm(1 / 4)
         }}
       >
-        <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-          {title}
-        </Link>
+        <span>{dateOfPublication} >> </span>
+        <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>{title}</Link>
       </li>
     </article>
   );
