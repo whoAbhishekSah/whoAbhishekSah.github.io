@@ -51,7 +51,7 @@ const Introduciton = () => {
         <a href="https://github.com/raystack"> Gojek Data Platform</a> team building
         alert orchestration and managing data infrastructure.
         <br />
-        <br />I am passionate about programming, writing and knowledge. Most of
+        <br />I am passionate about programming, writing and knowledge. Some of
         my work is on
         <a href="https://github.com/whoAbhishekSah/" style={iconStyle}>
           Github <FaGithub />

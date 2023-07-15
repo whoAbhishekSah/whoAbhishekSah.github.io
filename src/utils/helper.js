@@ -20,7 +20,8 @@ export const getShortDate = (d) => {
   const date = new Date(d);
   const month = monthNames[date.getMonth()].slice(0, 3);
   const day = String(date.getDate());
-  return day.length === 1 ? `${month} 0${day}` : `${month} ${day}`;
+  const year = String(date.getFullYear()).slice(2, 4);
+  return day.length === 1 ? `${month}-${year}` : `${month}-${year}  `;
 };
 
 export const indexPostsByYear = (posts) => {

@@ -35,7 +35,7 @@ const SocialIcons = () => {
           <FaLinkedin />
         </a>
       </div>
-      <span className="fading_line" />
+      {/* <span className="fading_line" /> */}
     </React.Fragment>
   );
 };
