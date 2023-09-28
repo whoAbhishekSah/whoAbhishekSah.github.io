@@ -1,6 +1,6 @@
 ---
 title: 'Architecting with AWS VPC'
-date: '2023-09-02T22:12:03.284Z'
+date: '2023-09-28T22:12:03.284Z'
 description: 'aws/vpc'
 ---
 
