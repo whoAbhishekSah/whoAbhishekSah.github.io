@@ -92,8 +92,8 @@ Our application is a movie directory consisting of a frontend that shows a catal
 
 At the topmost level - we have the US-east-2 region being represented with two availability zones. Let’s go through what we’ve done in the above diagram:
 
-- We created a VPC denoted by 10.1.0.0/16 and added an Internet Gateway to it
-- The VPC is split into 4 equal size subnets. In each availability zone, we will have two subnets, one public and one private. The Public subnets will have a custom route table associated which allows a route from 0.0.0.0/0 via the Internet Gateway. Any resource that should be reachable from outside the VPC should be placed inside this subnet.
+- We created a VPC denoted by `10.1.0.0/16` and added an Internet Gateway to it
+- The VPC is split into 4 equal size subnets. In each availability zone, we will have two subnets, one public and one private. The Public subnets will have a custom route table associated which allows a route from `0.0.0.0/0` via the Internet Gateway. Any resource that should be reachable from outside the VPC should be placed inside this subnet.
 - For high availability, we host two replicas of each instance(frontend, backend and database). The replicas are dispersed in different availability zones. So in case, an availability zone goes down, our application remains reachable to users.
 - We want only frontend replicas to be reachable from the internet. Hence, frontend replicas are put inside Public Subnets. Backend and Database replicas are placed inside a Private subnet. Frontend replicas can reach resources in the private subnet with the help of route table entry `10.1.0.0/16` via the `local` target.
 
