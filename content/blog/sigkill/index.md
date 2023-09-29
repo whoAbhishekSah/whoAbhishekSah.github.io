@@ -49,7 +49,7 @@ import (
 // all signals except SIGTERM
 func handler(signal os.Signal) {
 	if signal == syscall.SIGTERM {   //SIGTERM received
-        //masterNode.notifysecondaryTermination(secondaryNodeId)
+        //primaryNode.notifysecondaryTermination(secondaryNodeId)
 		os.Exit(0)
 	}
 }
