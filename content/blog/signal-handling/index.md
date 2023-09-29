@@ -1,7 +1,7 @@
 ---
 title: 'Handling shutdowns, gracefully'
-date: '2023-09-29T22:12:03.284Z'
-description: 'sigkill'
+date: '2023-09-29T22:13:03.284Z'
+description: 'signal-handling'
 ---
 
 ## Signals
