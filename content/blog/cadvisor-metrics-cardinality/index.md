@@ -66,9 +66,9 @@ kubectl get --raw /api/v1/nodes/ip-10-1-4-5.us-west-1.compute.internal/proxy/met
 
 ## Metrics Cardinality
 
-The metrics prepared by cAdvisor sometimes exceeds the label limit set by observability server. For example, in Grafana Mimir we see the max label for any series set to 30 via config option: `max_label_names_per_series` [ref](https://grafana.com/docs/mimir/latest/references/configuration-parameters/#limits)
+The metrics prepared by cAdvisor sometimes exceeds the label limit set by observability server. For example, in Grafana Mimir we see the max label for any series set to 30 (by default) via config option: `max_label_names_per_series` [ref](https://grafana.com/docs/mimir/latest/references/configuration-parameters/#limits)
 
-When I observed OTEL Collector logs after few hours of cAdvisor scrape setup, I found multiple series were getting rejected by Mimir server because they higher number of labels than acceptable limit. Some had 32 and 35 and even 38 :shocked:
+When I observed OTEL Collector logs after few hours of cAdvisor scrape setup, I found multiple series were getting rejected by Mimir server because they higher number of labels than acceptable limit. Some had 32 and 35.
 
 I wanted to take a look into what all labels were getting published in cAdvisor. For `container_oom_events_total` metric we sae the follwing labels:
 
@@ -109,3 +109,10 @@ metric_relabel_configs:
   - action: labeldrop
     regex: 'eks.*'
 ```
+
+This change brought down the label count to acceptable limits. Practically we may not need even the `topology_` prefixed labels. But we did the least amount of label rewriting to get the system running. If needed in future, we can look into further reducing the labelset using the same approach.
+
+
+#### References:
+
+- [Metric Relabeling](https://grafana.com/blog/2022/03/21/how-relabeling-in-prometheus-works/)
