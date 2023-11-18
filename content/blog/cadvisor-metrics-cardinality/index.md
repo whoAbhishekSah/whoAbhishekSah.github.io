@@ -1,5 +1,5 @@
 ---
-title: 'cAdvisor and high cardinality'
+title: 'cAdvisor high cardinality'
 date: '2023-11-11T22:12:03.284Z'
 description: 'prometheus cardinality'
 ---
@@ -89,7 +89,7 @@ topology_kubernetes_io_region
 topology_kubernetes_io_zone
 ```
 
-cAdviosr added these 20 labels(and more) in every series in addition to the global demographic labels such as cluster name, AWS account, etc that we add explicitly. In some metrics, this count reached 25 or so. We quickly concluded that not all of these are required - so instead of changing server limits, we could delete these labels without harming anything. Luckily, Prometheus provides a way to rewrite labelset using `metric_relabel_config`. We decided to drop all `eks_` prefixed labels. The way to do that is:
+cAdviosr added these 20 labels(and more) in every series in addition to the global demographic labels such as cluster name, AWS account, etc that we add explicitly. In some metrics, this count reached 25 or so. We quickly concluded that not all of these are required - so instead of changing server limits, we could delete these labels without harming anything. Luckily, Prometheus provides a way to rewrite labelset using `metric_relabel_config`. We decided to drop all `eks_` prefixed labels since these value can be derived from hostname alone. The way to do that is:
 
 ```yaml
 relabel_configs: 
