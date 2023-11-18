@@ -1,6 +1,6 @@
 ---
 title: 'cAdvisor high cardinality'
-date: '2023-11-11T22:12:03.284Z'
+date: '2023-11-18T22:12:03.284Z'
 description: 'prometheus cardinality'
 ---
 
