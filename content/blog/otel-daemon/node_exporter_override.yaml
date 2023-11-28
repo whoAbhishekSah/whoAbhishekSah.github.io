@@ -1,0 +1,5 @@
+# Annotations to be added to node exporter daemonset
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/port: "9100"
+
