@@ -4,21 +4,22 @@ date: '2023-11-19T22:12:03.284Z'
 description: 'otel-collector'
 ---
 
-Open telemetry collector is one of the most popular CNCF projects attempted to receive, process and export telemetry data. At [Pixxel](https://www.pixxel.space/), we use OTEL Collector to discover targets in a k8s cluster, scrape metrics from configured endpoint and export the metrics to Grafana Mimir server. This is a mix of both push and pull approach. The pull part refers to discovering targets and scraping the endpoints. The push part refers to remote-writing the metrics to a Monitoring server.
+Open telemetry collector is one of the most popular CNCF projects that attempts to receive, process and export telemetry data. At [Pixxel](https://www.pixxel.space/), we use OTEL Collector to discover targets in a k8s cluster, scrape metrics from the configured endpoint and export the metrics to the Grafana Mimir server. This approach is a mix of both push and pull approaches. The pull part refers to discovering targets and scraping the endpoints. The push part refers to remote-writing the metrics to a Monitoring server.
 
-An alternative way to achieve this setup is to run Prometheus in [agent mode](https://prometheus.io/blog/2021/11/16/agent/). But a major drawback I believe is fault tolerance. One prometheus pod per cluster(be it agent or normal mode) is a single point of failure. If that pod becomes unhealthy you may end up loosing metrics for the whole cluster. Although, it can be argued that these limitations can be overcome by proper resource/limit configuration to signal the priority of the pod to kubernetes cluster or by proper retry/buffer configuration, but that presents you with more ops work. Moreover, you may need to revisit these configuration as and when the workload increases in the cluster. It feels more ops work than a setup where we distribute the scraping workload to many replicas(daemonsets). Since Prometheus doesn't support a daemonset deployment, OTEL collector was a no brainer choice.
+An alternative way to achieve this setup is to run Prometheus in [agent mode](https://prometheus.io/blog/2021/11/16/agent/). However, a significant drawback is fault tolerance. One Prometheus pod per cluster(agent or normal mode) is a single point of failure. If that pod becomes unhealthy, you may lose metrics for the whole cluster. However, these limitations can be overcome by proper resource/limit configuration to signal the priority of the pod to the Kubernetes cluster or by correct retry/buffer configuration that presents you with more ops work.
+Moreover, you may need to revisit these configurations as and when the workload increases in the cluster. It feels more work than a setup that distributes the scraping workload to many replicas(daemon sets). The OTEL collector was a no-brainer choice since Prometheus doesn't support a daemon set deployment.
 
-The following section describes how to configure the OTEL collector as daemonset. The fun part is leveraging Kuberneets service discovery with a node name filter. Since there weren't many good tutorials available on this deployment mode, I decided to write one :D
+The following section describes configuring the OTEL collector as a daemon set. The fun part is leveraging Kubernetes service discovery with a node name filter. Since there weren't many good tutorials available on this deployment mode, I decided to write one :D
 
 ## Setup
 
-Let's use the OTEL Collector [helm chart](https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector) to deploy it as Daemonset. I'll be using minikube for the below demonstartaion. Let's start a local kubernetes cluster with 2 nodes.
+Let's use the OTEL Collector [helm chart](https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-collector) to deploy it as Daemonset. I'll be using Minikube for the demonstration below. Let's start a local Kubernetes cluster with two nodes.
 
 ```
 minikube start --nodes 2 -p local-k8s-cluster
 ```
 
-Add Open-telemety repo to Helm:
+Add OpenTelemety repo to Helm:
 
 ```
 helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
@@ -26,9 +27,9 @@ helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm
 
 ## Service Discovery
 
-For each OTEL collector pod, we want to scrape only those pods that are running on the same node. We can acheive that in 2 steps:
+We want to scrape only those pods running on the same node for each OTEL collector pod. We can achieve that in 2 steps:
 
-1. Discover all pods using `kubernetes_sd_config`. We will need to provide clusterrole to our daemonset to discover nodes.
+1. Discover all pods using `kubernetes_sd_config`. We will need to provide cluster roles to our daemon set to discover pods.
 2. Filter using `nodeName` spec. [ref](https://kubernetes.io/docs/tasks/inject-data-application/environment-variable-expose-pod-information/).
 
 ```yaml
@@ -44,9 +45,9 @@ scrape_configs:
             field: 'spec.nodeName=${env:KUBE_NODE_NAME}'
 ```
 
-With the nodeName field selector filter, we can pick only targets on the same node. The node name is read from env variable(assuming it is set in env of the pods during provisioning). Prometheus doesn't support env variables in config file which limits its usage as daemonset(in agent mode).
+With the nodeName field selector filter, we can pick only targets on the same node. The node name is read from the env variable(assuming it is set in the env of the pods during provisioning). Prometheus doesn't support env variables in the config file, which limits its usage as a daemon (in agent mode).
 
-After the pods have been discovered on each node, we need a way to find the port number and path on the pods to scrape metrics. It can be acheived by leveraging pod labels/annotations. OTEL Collector provides the pod label and annotations inside metric label for that target, which we can read and take required action using relabeling(`relabel_configs`):
+After the pods have been discovered on each node, we need a way to find the port number and path on the pods to scrape metrics. We can leverage pod labels/annotations for this. OTEL Collector provides the pod label and annotations inside the metric label for that target, which we can read and take required action using relabeling(`relabel_configs`):
 
 ```yaml
 relabel_configs:
@@ -64,13 +65,13 @@ relabel_configs:
     replacement: $$1:$$2
 ```
 
-The first item in the `relabel_configs` array checks for presence of the annotation `prometheus.io/scrape: true` on the discovered target. Only those targets are kept which match the regex specified in the `keep` block. `keep` and `drop` actions allow us to filter out targets and metrics based on whether our label values match the provided regex. The second item in the array, configures the host and port of the target. The `scheme` sets to `http` by default and path to `/metrics`. The configs can be overridden by relabelling.
+The first item in the `relabel_configs` array checks for the presence of the annotation `prometheus.io/scrape: true` on the discovered target. Only those targets that match the regex specified in the `keep` block are kept. `keep` and `drop` actions allow us to filter out targets and metrics based on whether our label values match the provided regex. The second item in the array configures the host and port of the target. The scheme is set to `http` by default. The path is set to `/metrics`. These configs can be overridden by relabelling.
 
-So far, we have established the receiver configurarion of the OTEL Collctor. To complete the demonstaration, end to end, I will run a Prometheus Server where our collector pods will write the metrics. We can setup a grafana instance to query from this server.
+So far, we have established the receiver configuration of the OTEL Collector. To complete the demonstration, end to end, I will run a Prometheus Server where our collector pods will write the metrics. We can set up a Grafana instance to query from this server.
 
 ## Metric storage with Prometheus
 
-Here is a kubernetes manifest to create a prometheus deployment enabled with remotewrite, exposed via a K8s Service.
+Here is a Kubernetes manifest to create a Prometheus deployment enabled with remote write, exposed via a K8s Service.
 
 ```yaml
 # prometheus.yml
@@ -146,11 +147,12 @@ kubectl apply -f prometheus.yml
 ```
 
 After applying the above file to our cluster we will have a working Prometheus deployment ready to accept remote writes. It is exposed via a kubernetes service which can be accessed via this DNS:
+
 `http://prometheus.default.svc.cluster.local:9090`
 
 ### Collector config
 
-Now is the time to push some data to Prometheus. Let's deploy our OTEL collector with proper config using the below helm override file.
+Now is the time to push some data to Prometheus. Let's deploy our OTEL collector with the proper configuration using the Helm override file below.
 
 ```yaml
 #otel-override.yaml
@@ -236,20 +238,19 @@ ports:
 ```
 
 This can be applied to cluster: `helm install otel-collector open-telemetry/opentelemetry-collector -f otel-override.yaml`
+Let's go through some critical aspects of this Helm override:
 
-Let's go through some important aspects of this helm override:
+1. We set the deployment to daemon set and added an extra env var to capture the node name on each daemon pod of OTEL Collector.
 
-1. We set the deployment to daemonset and add extra env var to capture the nodename on each daemon pod of OTEL Collector.
+2. The metrics pipeline is built using the `prometheus` receiver and `prometheusremotewrite` exporter defined in their respective sections. If you are unfamiliar with receivers and exporters, here is a [reference](https://opentelemetry.io/docs/collector/configuration/).
 
-2. The metrics pipeline is built using `prometheus` receiver and `prometheusremotewrite` exporter defined in their respective sections. If you are not familiar with receivers and exporters, here is a [reference](https://opentelemetry.io/docs/collector/configuration/).
+3. The receiver has rules for pod discovery using pod annotations. It picks only those pods that are running on the same node using the nodeName field selector. The nodeName is specified in a templated way, `spec.nodeName=${env:KUBE_NODE_NAME}`, which will render to node name during runtime.
 
-3. The receiver has rules for pod discovery using pod annotations. It picks only those pods which are running on the same node, using nodeName field selector. The nodeName is specified in a templated way `spec.nodeName=${env:KUBE_NODE_NAME}` which will render to nodename during runtime.
+4. The exporter writes to the Prometheus server at its remote write endpoint. It also places a label `collector: otel-collector` in all the series. Such "global" labels can be crucial when running multiple Kubernetes clusters in the same/different cloud accounts(AWS Account/GCP project).
 
-4. The exporter writes to prometheus server at it's remotewrite endpoint. It also places a label `collector: otel-collector` in all the series. Such "global" labels can be crucial when running multiple kubernetes clusters in same/different cloud accounts(AWS Account/GCP project) etc.
+5. The required cluster role and binding are specified to discover pods.
 
-5. The required cluster role and binding is specified to discover pods.
-
-6. We have not opened the OTEL Container Ports that are not needed in the scope of this article.
+6. We also don't open the OTEL Container Ports that are not needed in the scope of this article.
 
 With all workloads created(Node Exporter daemon, OTEL Collector daemon and prometheus pod), this is how the cluster should look like:
 
@@ -265,25 +266,25 @@ prometheus-5b54c7c696-4kzjj                          1/1     Running   0        
 
 ### Querying data
 
-If everything goes right, you should be able to see the data from node_exporter daemons in prometheus. The simplest way to query would be pop up the prometheus UI on your browser and query for some data.
+If everything goes right, you should see the data from node_exporter daemons in Prometheus. The simplest way to query is to pop up the prometheus UI on your browser and query for some data.
 
-You can access the Prometheus UI on your browser by port-forwarding the Prometheus kubernetes service: (make sure your port 9090 on your local machine is free to use)
+You can access the Prometheus UI on your browser by port-forwarding the Prometheus Kubernetes service (make sure your port 9090 on your local machine is free to use)
 
 ```
 k port-forward svc/prometheus 9090:9090
 ```
 
-Navigate to http://localhost:9090 and execute the query shown in the image below. Verify if you are getting 1 timeseries row per node_exporter.
+Navigate to http://localhost:9090 and execute the query shown in the image below. Verify if you are getting a one-time series row per node_exporter.
 
 ![PromQuery](./query.png)
 
-We can also spin up a Grafana instance for better visualation: Port-forward Prometheus service locally and add the localhost:port as Data Source(also called Connections) in this grafana instance.
+We can also spin up a Grafana instance for better visualisation: Port-forward Prometheus service locally and add the localhost:port as Data Source(also called Connections) in this Grafana instance.
 
 ### Debugging
 
-If something doesn't work as expected you can use debug logs to see the errors.
+If something doesn't work as expected, you can use debug logs to see the errors.
 
-1. OTEL collector debug log : Modify the "service" section to add debug config.
+1. OTEL collector debug log: Modify the "service" section to add additional debug config.
 
 ```yaml
 service:
@@ -300,4 +301,4 @@ service:
 
 ---
 
-To recap, we looked into how to deploy OTEL collectors as daemons on a kubernetes cluster and discover pods local to collectors node. We also looked into how to export these metrics to a remote server and visualize the metrics. At the end we looked into how to debug, in case things don't work as expected. That's all I had to document for OTEL Collector usage. Stay tuned for more blogs!
+To recap, we looked into how to deploy OTEL collectors as daemons on a Kubernetes cluster and discover pods local to the collector's node. We also looked into how to export these metrics to a remote server and visualise the metrics. In the end, we looked into how to debug in case things don't work as expected. That's all I had to document for OTEL Collector usage. Stay tuned for more blogs!
