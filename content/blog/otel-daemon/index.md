@@ -1,6 +1,6 @@
 ---
 title: 'Deploying OTEL Collector as Daemonset'
-date: '2023-11-19T22:12:03.284Z'
+date: '2023-12-02T22:12:03.284Z'
 description: 'otel-collector'
 ---
 
